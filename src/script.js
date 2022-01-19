@@ -5,7 +5,7 @@ function generatePass() {
     newPassword.innerHTML = '';
 
     if(pass.value === '') {
-        alert('Digite o tamanho da sua senha!');
+        alert('Por favor, digite o tamanho da sua senha!');
         return;
     }
 
