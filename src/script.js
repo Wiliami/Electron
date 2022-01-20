@@ -1,22 +1,17 @@
-const pass = document.querySelector('#pass');
-const newPassword = document.querySelector('#newPassword');
+const adicionar = document.querySelector('#adicionar');
+const deleteMusica = document.querySelector("#deleteMusica");
 
-function generatePass() {
+function adicionarMusica() {
     newPassword.innerHTML = '';
 
-    if(pass.value === '') {
-        alert('Por favor, digite o tamanho da sua senha!');
+    if(adicionar.value === '') {
+        alert('Adicione uma música na lista!');
         return;
     }
 
-    let charset = "bsfkjbasfbrjbberberregbkejbjgkerbjjbjhhfghfhdrtcbvgvDNFJKBJBFQRGNQEBGKBQEKJBGKJ12345678";
-    let password = "";
-
-    for(var i = 0, n = charset.length; i < pass.value; ++i) {
-        password += charset.charAt( Math.floor(Math.random() * n ));
-    }
-
-    let result = document.createTextNode(password);
-    return newPassword.appendChild(result);
-
 };
+
+
+function deleteMusica () {
+    deleteMusica.splice();
+}
