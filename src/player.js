@@ -1,4 +1,4 @@
-window.player = {
+const player = {
     cover: document.querySelector(".card-image"),
     title: document.querySelector(".card-content h5"),
     artist: document.querySelector(".artist"),
@@ -6,8 +6,7 @@ window.player = {
     audioData: audios,
     currentAudio: {},
 
-    start () {
-
+    start() {
         this.currentAudio = this.audioData[0];
         this.cover.style.background = `url('${path(this.currentAudio.cover)}') no-repeat center center / cover`;
         this.title.innerText = this.currentAudio.title;
@@ -15,9 +14,10 @@ window.player = {
         this.audio.src = path(this.currentAudio.file);
 
         this.audio.addEventListener("ended", () => {
-            this.audio.src = path(this.audioData[1].file);
-            this.audio.play();
+        this.audio.src = path(this.audioData[1].file);
+        this.audio.play();
         });
+    },
 
-    }
 };
+
