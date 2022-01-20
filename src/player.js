@@ -1,19 +1,23 @@
 window.player = {
-    cover: document.querySelector(),
-    title: document.querySelector(),
-    artist: document.querySelector(),
-    audio: document.querySelector(),
-    data: {
-        title: "",
-        artist: "",
-        cover: "",
-        file: ""
-    },
+    cover: document.querySelector(".card-image"),
+    title: document.querySelector(".card-content h5"),
+    artist: document.querySelector(".artist"),
+    audio: document.querySelector(".audio"),
+    audioData: audios,
+    currentAudio: {},
 
     start () {
-        this.cover.style.background = ``;
-        this.title.innerText = this.data.title;
-        this.artist.innerText = this.data.artist;
-        this.audio.src = this.data.file;
+
+        this.currentAudio = this.audioData[0];
+        this.cover.style.background = `url('${path(this.currentAudio.cover)}') no-repeat center center / cover`;
+        this.title.innerText = this.currentAudio.title;
+        this.artist.innerText = this.currentAudio.artist;
+        this.audio.src = path(this.currentAudio.file);
+
+        this.audio.addEventListener("ended", () => {
+            this.audio.src = path(this.audioData[1].file);
+            this.audio.play();
+        });
+
     }
 };
