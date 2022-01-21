@@ -4,3 +4,4 @@ const path = function(file) {
 
 
 window.addEventListener("load", player.start());
+ 
