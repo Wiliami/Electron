@@ -6,7 +6,7 @@ const player = {
     audioData: audios,
     currentAudio: {},
 
-    start() {
+   start () {
         this.currentAudio = this.audioData[0];
         this.cover.style.background = `url('${path(this.currentAudio.cover)}') no-repeat center center / cover`;
         this.title.innerText = this.currentAudio.title;
@@ -18,6 +18,6 @@ const player = {
         this.audio.play();
         });
     },
-
 };
 
+// parece que o Electron não aceita esse tipo de objeto
