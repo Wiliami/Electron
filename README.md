@@ -1,2 +1,2 @@
-# Gerador-de-senha
-Criando um mini app de gerador de senha com EletronJS
+# Electron testes
+Testes app electron

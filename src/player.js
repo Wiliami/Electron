@@ -19,5 +19,3 @@ const player = {
         });
     },
 };
-
-// parece que o Electron não aceita esse tipo de objeto
